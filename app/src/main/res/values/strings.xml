@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Food</string>
+    <string name="Login">LOGIN\n</string>
+    <string name="Name">Name\n</string>
+    <string name="Password">Password\n</string>
+    <string name="login">login</string>
+    <string name="main">Main</string>
+    <string name="mycart">MyCart</string>
+    <string name="prowse">prowse</string>
+    <string name="mealplanes">mealPlanes</string>
+    <string name="meals">Meals</string>
+    <string name="fab_content_desc">action_buttom\n</string>
+</resources>

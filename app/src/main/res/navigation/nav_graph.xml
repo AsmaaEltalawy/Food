@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/browse">
+    <fragment
+        android:id="@+id/browse"
+        android:name="com.example.food.Browse"
+        android:label="Browse" />
+
+    <fragment
+        android:id="@+id/mealPlans"
+        android:name="com.example.food.MealPlans"
+        android:label="MealPlans" />
+
+    <fragment
+        android:id="@+id/cart"
+        android:name="com.example.food.Cart"
+        android:label="Cart" />
+</navigation>
