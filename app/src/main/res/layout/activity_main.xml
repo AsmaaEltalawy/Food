@@ -6,7 +6,7 @@
     <data>
 
     </data>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
@@ -15,6 +15,7 @@
         android:layout_height="match_parent">
 
         <TextView
+
             android:id="@+id/textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,22 +29,27 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
         <androidx.fragment.app.FragmentContainerView
+
             android:id="@+id/nav_host"
-            android:name="com.example.food.Browse"
-            android:layout_width="match_parent"
-            android:layout_height="750dp"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textview"
-            app:navGraph="@navigation/nav_graph">
+            app:layout_constraintVertical_bias="0.0"
+
+            >
 
         </androidx.fragment.app.FragmentContainerView>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"
+            app:backgroundTint="@color/white"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_80dp"
             app:itemIconTint="@drawable/selector"
@@ -53,20 +59,24 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:menu="@menu/bottom_navigation_menu"
-             />
+            tools:ignore="VisualLintBottomNav" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:contentDescription="@string/Login"
-        android:src="@drawable/cart">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="85dp"
+            android:backgroundTint="@color/white"
+            android:contentDescription="@string/Login"
+            android:src="@drawable/cart"
+            tools:ignore="ImageContrastCheck">
 
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
 </layout>
+
