@@ -7,7 +7,11 @@
     <fragment
         android:id="@+id/browse"
         android:name="com.example.food.Browse"
-        android:label="Browse" />
+        android:label="Browse" >
+        <action
+            android:id="@+id/action_browse_to_fooddetailsFragment"
+            app:destination="@id/fooddetailsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/mealPlans"
@@ -18,4 +22,12 @@
         android:id="@+id/cart"
         android:name="com.example.food.Cart"
         android:label="Cart" />
+    <fragment
+        android:id="@+id/fooddetailsFragment"
+        android:name="com.example.food.fooddetailsFragment"
+        android:label="fooddetailsFragment" >
+        <argument android:name="food"
+            app:argType="com.example.food.Fooditem"></argument>
+    </fragment>
+
 </navigation>
